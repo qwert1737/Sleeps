@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sleepgraph"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/read_sleep_day"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:src="@drawable/zzz" />
+
+    <TextView
+        android:id="@+id/read_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/read_sleep_day"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/read_sleep_day"
+        android:layout_toRightOf="@+id/read_sleep_day"
+        android:text="일별"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/read_sleep_week"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/read_sleep_day"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="130dp"
+        android:clickable="true"
+        android:src="@drawable/zzz" />
+
+    <TextView
+        android:id="@+id/read_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/read_sleep_week"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/read_sleep_week"
+        android:layout_toRightOf="@+id/read_sleep_week"
+        android:text="주별"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/read_sleep_month"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/read_sleep_week"
+        android:layout_marginLeft="130dp"
+        android:clickable="true"
+        android:src="@drawable/zzz" />
+
+    <TextView
+        android:id="@+id/read_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/read_sleep_month"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/read_sleep_month"
+        android:layout_toRightOf="@+id/read_sleep_month"
+        android:text="월별"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>

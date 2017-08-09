@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_daygraph"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.studentapp.dayGraph">
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/piegraph"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="45dp">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/piegraph"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/day_pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/piegraph"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/date"
+        android:text="Day pattern"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/day_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/day_pattern"
+        android:text="     Time         l        Pattern    l    PatternTime"
+        android:textSize="20dp" />
+
+
+    <ListView
+        android:id="@+id/pattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/day_view">
+
+    </ListView>
+</RelativeLayout>

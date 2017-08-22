@@ -61,7 +61,7 @@ public class MainListAdapter extends ArrayAdapter<StudentVO> {
                // if(vo.photo != null && !vo.phone.equals("")){
                     // 데이터 보는 화면.
                     Intent intent = new Intent();
-                    intent.setClass(context,Sleepgraph.class);
+                    intent.setClass(context,addstudentactivity.class);
                     intent.putExtra("id",datas.get(position).id);
                     context.startActivity(intent);
             }

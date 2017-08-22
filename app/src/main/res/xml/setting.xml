@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="기본 설정">
+        <EditTextPreference
+            android:id="@+id/user_name"
+            android:key="name"
+            android:title="이름" />
+        <EditTextPreference
+            android:id="@+id/user_age"
+            android:key="age"
+            android:title="나이" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="알람">
+        <SwitchPreference
+            android:key="alram"
+            android:title="상태 알림"
+            android:id="@+id/alram"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="어플 정보">
+        <Preference
+            android:key="imformation"
+            android:summary="어플 정보를 확인합니다."
+            android:title="어플 정보"></Preference>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

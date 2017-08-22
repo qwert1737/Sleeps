@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme"
         android:name=".MyApplication">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="수면 패턴 분석"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,6 +27,8 @@
         <activity android:name=".weekGraph"></activity>
         <activity android:name=".monthGraph"></activity>
         <activity android:name=".DayCalendar"></activity>
+        <activity android:name=".Click_menu"></activity>
+        <activity android:name=".Setting"></activity>
     </application>
 
 </manifest>

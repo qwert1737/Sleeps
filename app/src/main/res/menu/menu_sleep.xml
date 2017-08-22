@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="sleeping"
+        android:id="@+id/sleeping"
+        android:icon="@drawable/zzz"/>
+    <item android:title="CCTV"
+        android:id="@+id/CCTV"
+        android:icon="@drawable/cctv"/>
+    <item android:title="setting"
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:title="power"
+        android:id="@+id/power"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+</menu>

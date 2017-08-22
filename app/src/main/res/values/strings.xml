@@ -5,4 +5,6 @@
     <string name="add_name_null">Name is Empty</string>
     <string name="read_add_score_dialog_message">Do you add for {1} grade?</string>
     <string name="not_data">Has no sleep data</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

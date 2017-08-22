@@ -5,7 +5,7 @@
     android:id="@+id/activity_read_student"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.studentapp.Readstudentactivity">
+    tools:context="com.example.user.sleep.Readstudentactivity">
 
     <ImageView
         android:id="@+id/read_student_image"

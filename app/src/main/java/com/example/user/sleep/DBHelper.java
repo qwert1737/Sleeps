@@ -20,9 +20,7 @@ public class DBHelper extends SQLiteOpenHelper{
         String studentSql = "create table tb_student ("+
                 "_id integer primary key autoincrement, "+
                 "name not null, " +
-                "email, "+
-                "phone, "+
-                "photo)";
+                "email )";
 
 
 

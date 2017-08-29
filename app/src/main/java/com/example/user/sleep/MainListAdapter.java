@@ -58,10 +58,8 @@ public class MainListAdapter extends ArrayAdapter<StudentVO> {
         sleepView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-               // if(vo.photo != null && !vo.phone.equals("")){
-                    // 데이터 보는 화면.
                     Intent intent = new Intent();
-                    intent.setClass(context,addstudentactivity.class);
+                    intent.setClass(context,MainActivity.class);
                     intent.putExtra("id",datas.get(position).id);
                     context.startActivity(intent);
             }

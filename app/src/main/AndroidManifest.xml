@@ -2,16 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.sleep">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/sleeping"
         android:label="수면 패턴 분석"
         android:roundIcon="@drawable/sleeping"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".MyApplication">
-
-        <activity android:name=".MainActivity"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
             android:label="수면 패턴 분석"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,15 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".addstudentactivity"></activity>
-        <activity android:name=".Readstudentactivity"></activity>
-        <activity android:name=".Sleepgraph"></activity>
-        <activity android:name=".dayGraph"></activity>
-        <activity android:name=".weekGraph"></activity>
-        <activity android:name=".monthGraph"></activity>
-        <activity android:name=".DayCalendar"></activity>
-        <activity android:name=".Click_menu"></activity>
-        <activity android:name=".Setting"></activity>
+        <activity android:name=".addstudentactivity" />
+        <activity android:name=".Readstudentactivity" />
+        <activity android:name=".Sleepgraph" />
+        <activity android:name=".dayGraph" />
+        <activity android:name=".weekGraph" />
+        <activity android:name=".monthGraph" />
+        <activity android:name=".DayCalendar" />
+        <activity android:name=".Click_menu" />
+        <activity android:name=".Setting" />
     </application>
 
 </manifest>

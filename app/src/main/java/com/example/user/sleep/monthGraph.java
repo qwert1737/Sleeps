@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -55,16 +59,15 @@ public class monthGraph extends AppCompatActivity {
         int i = 1;
         String date;
         int date_int;
-        int year, month, dayOfMonth;
+        int month, dayOfMonth;
         theDates.add("0");
 
         while(cursor.moveToNext()){
             date = cursor.getString(0);
             date_int = Integer.parseInt(date);
-            year = date_int/10000;
             month = (date_int%10000)/100;
             dayOfMonth = date_int%100;
-            date = year+"/"+month+"/"+dayOfMonth;
+            date = month+"/"+dayOfMonth;
 
             theDates.add(date);
             barEntries.add(new BarEntry(i,cursor.getInt(1)));
@@ -91,11 +94,8 @@ public class monthGraph extends AppCompatActivity {
 
 
         XAxis xAxis = barChart.getXAxis();
-        //xAxis.setGranularity(0.5f);
         xAxis.setGranularityEnabled(true);
-        // xAxis.setCenterAxisLabels(true);
         xAxis.setDrawGridLines(false);
-        //xAxis.setAxisMaximum(7);
         xAxis.setPosition(XAxis.XAxisPosition.BOTH_SIDED);
         xAxis.setValueFormatter(new IndexAxisValueFormatter(theDates));
 
@@ -109,9 +109,42 @@ public class monthGraph extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_day,menu);
 
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
 
+            case R.id.day:
+                Intent intent = new Intent(this, DayCalendar.class);
+                startActivity(intent);
+                return true;
+            case R.id.week:
+                Intent intent2 = new Intent(this, weekGraph.class);
+                startActivity(intent2);
+                return true;
+            case R.id.month:
+                Intent intent3 = new Intent(this, monthGraph.class);
+                startActivity(intent3);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

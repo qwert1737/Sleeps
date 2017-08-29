@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class DBHelper extends SQLiteOpenHelper{
-    public static int DATABASE_VERSION = 15;
+    public static int DATABASE_VERSION = 18;
 
     public DBHelper(Context context){
         super(context, "studentdb",null, DATABASE_VERSION);
@@ -19,8 +19,11 @@ public class DBHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db){
         String studentSql = "create table tb_student ("+
                 "_id integer primary key autoincrement, "+
-                "name not null, " +
-                "email )";
+                "name, " +
+                "age, "+
+                "sex, "+
+                "birthday, "+
+                "stature )";
 
 
 
@@ -52,7 +55,7 @@ public class DBHelper extends SQLiteOpenHelper{
         db.execSQL(timeSql);
     }
 
-    @Override  // 디비 업그레이드
+    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         if(newVersion == DATABASE_VERSION){
             db.execSQL("drop table tb_student");

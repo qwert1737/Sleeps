@@ -69,7 +69,6 @@ public class Readstudentactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //listView.setOnClickListener(this);
 
         setContentView(R.layout.activity_readstudentactivity);
 
@@ -126,17 +125,7 @@ public class Readstudentactivity extends AppCompatActivity {
 
         listView.setAdapter(sa);
         db.close();
-
-
     }
-/*
-    @Override
-    public void onClick(View v) {
-        if(v == listView){
-            Intent intent = new Intent(this, dayGraph.class);
-            startActivity(intent);
-        }
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -180,8 +169,21 @@ public class Readstudentactivity extends AppCompatActivity {
             String start_end = StartEndGroup.getText().toString();
             String pattern_time = PatternTimeGroup.getText().toString();
 
-
             int sleep_start = Integer.parseInt(pattern_time);
+
+            if(start_end.equals("1")){
+                start_end = "Start";
+            }
+            else if(start_end.equals("2")) {
+                start_end = "End";
+            }
+
+            if (sleep_pattern.equals("1")){
+                sleep_pattern = "얕은 수면";
+            }
+            else{
+                sleep_pattern = "깊은 수면";
+            }
 
             if(start_end.equals("Start")) {
                 sleep_time = sleep_start;
@@ -204,11 +206,6 @@ public class Readstudentactivity extends AppCompatActivity {
             db.execSQL("insert into tb_daypattern (student_id, day, sleep, sleep_pattern, pattern_time) values (?, ?, ?, ?, ?)",
                     new String[]{String.valueOf(studentId),day, sleep, sleep_pattern, pattern_time});
             db.close();
-
-
-
-
-
 
             HashMap<String, String> map=new HashMap<>();
             map.put("day",day);

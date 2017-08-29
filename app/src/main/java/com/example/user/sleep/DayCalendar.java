@@ -39,7 +39,6 @@ public class DayCalendar extends AppCompatActivity {
                 intent.putExtra("year",year);
                 intent.putExtra("month",month);
                 intent.putExtra("dayOfMonth",dayOfMonth);
-                //Log.d(getClass().getSimpleName(),"년"+year+"월"+month+"일"+dayOfMonth);
                 startActivity(intent);
             }
         });

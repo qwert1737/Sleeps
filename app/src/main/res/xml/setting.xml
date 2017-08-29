@@ -4,24 +4,37 @@
     <PreferenceCategory android:title="기본 설정">
         <EditTextPreference
             android:id="@+id/user_name"
+            android:hint="닉네임"
+            android:title="닉네임"
             android:key="name"
-            android:title="이름" />
+            android:capitalize="words"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"
+            />
         <EditTextPreference
             android:id="@+id/user_age"
             android:key="age"
             android:title="나이" />
+        <ListPreference
+            android:title="성별"
+            android:key="sex"
+            android:entries="@array/lists"
+            android:entryValues="@array/lists"
+            android:defaultValue="-1"
+            />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="알람">
+    <PreferenceCategory android:title="블루투스">
         <SwitchPreference
             android:key="alram"
-            android:title="상태 알림"
+            android:title="블루투스 허용"
             android:id="@+id/alram"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="어플 정보">
         <Preference
-            android:key="imformation"
+            android:key="information"
             android:summary="어플 정보를 확인합니다."
             android:title="어플 정보"></Preference>
     </PreferenceCategory>

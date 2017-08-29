@@ -10,9 +10,4 @@ public class StudentVO {
     String email;
     String phone;
     String photo;
-
-//    String sleep_pattern;
- //   String start_end;
-//    int pattern_time;
-
 }

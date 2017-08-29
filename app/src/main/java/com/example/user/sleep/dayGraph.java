@@ -7,8 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -33,10 +36,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.zip.Inflater;
-
-//import static com.example.sleep.R.id.radio;
-//import static com.example.sleep.R.id.read_sleep_day;
-
 
 public class dayGraph extends AppCompatActivity{
 
@@ -161,4 +160,41 @@ public class dayGraph extends AppCompatActivity{
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_day,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.day:
+                Intent intent = new Intent(this, DayCalendar.class);
+                startActivity(intent);
+                return true;
+            case R.id.week:
+                Intent intent2 = new Intent(this, weekGraph.class);
+                startActivity(intent2);
+                return true;
+            case R.id.month:
+                Intent intent3 = new Intent(this, monthGraph.class);
+                startActivity(intent3);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

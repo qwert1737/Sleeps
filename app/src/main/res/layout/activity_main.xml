@@ -9,12 +9,131 @@
     >
 
 
-    <ListView
-        android:id="@+id/main_list"
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_height="150dp"
+        android:layout_marginTop="140dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 수면 수준"
+            android:textSize="35dp"
+            android:layout_gravity="center_horizontal|top" />
+
+        <ImageView
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/laughing"
+            android:id="@+id/sleep_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sleepcheck"
+            android:text="적당한 수면"
+            android:textSize="15dp"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="70dp"/>
+
+
+        <FrameLayout
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="160dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘 수면 시간 : "
+                android:textSize="20dp"
+                android:layout_gravity="right|top"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어제 수면 시간 : "
+                android:textSize="20dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평균 수면 시간 : "
+                android:textSize="20dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="80dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최대 수면 시간 : "
+                android:textSize="20dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="120dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최소 수면 시간 : "
+                android:textSize="20dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="160dp"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="160dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/todaysleep"
+                android:text="8시간 25분"
+                android:textSize="20dp"
+                android:layout_gravity="left|top"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tomorrowsleep"
+                android:text="8시간 25분"
+                android:textSize="20dp"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meansleep"
+                android:text="8시간 25분"
+                android:textSize="20dp"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="80dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/maxsleep"
+                android:text="8시간 25분"
+                android:textSize="20dp"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="120dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minsleep"
+                android:text="8시간 25분"
+                android:textSize="20dp"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="160dp"/>
+
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
 
     <include android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -53,14 +53,6 @@ public class Receivejson {
         } catch (JSONException e){
             e.printStackTrace();
         }
-
-     //   DBHelper helper = new DBHelper(this);
-     //   SQLiteDatabase db = helper.getWritableDatabase();
-     //   db.execSQL("insert into tb_sleep (day, sleeptime, sleeppattern) values (?,?,?)",
-     //           new String[]{name,email,phone});
-        //db.close();
-
-      //  finish();
     }
 
 
